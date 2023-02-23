@@ -1,14 +1,19 @@
 
 
 const priceKm = 0.21
-const numeroKm = parseInt (prompt('Quanti Km devi percorrere?'));
+
+const myName = document.querySelector('#name');
+console.log(myName);
+
+const numeroKm = document.querySelector('#Km');
 console.log(numeroKm);
 
-const etaPassegero = parseInt (prompt('Quanti anni hai?'));
+
+const etaPassegero = document.querySelector('#age');
 console.log(etaPassegero);
 
 
-let prezzo = numeroKm * priceKm;
+const prezzo = numeroKm * priceKm;
 console.log(prezzo);
 
 let discountOver = (prezzo * 0.4)
@@ -34,3 +39,13 @@ document.getElementById('prezzo').innerHTML = (prezzo.toFixed(2))
 
 
 
+domInput.addEventListener('click',
+function () {
+    const kmDom = document.getElementById("Km");
+    const numeroKmDom =  kmDom.value
+
+    const ageDom = document.getElementById("age");
+    const etaPassengerDom =  ageDom.value
+
+}
+)
