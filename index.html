@@ -10,31 +10,75 @@
 <body>
 
     <main>
-
-
-            
-            <label for="name">Come ti chiami?</label>
+         <div class="generaIltuoTicket">
+             <label for="name">Nome</label>
             <input type="text" id="name">
 
-            <label for="Km">Quanti Km devi percorrere?</label>
-            <input type="text" id="Km">
+            <label for="age">Eta</label>
+            <select id="age">
+              <option value="minorenne">Sconto minorenni</option>
+              <option value="maggiorenne">Maggiorenne</option>
+              <option value="senior">Sconto silver</option>
 
-            <label for="age">Quanti anni hai?</label>
-            <input type="text" id="age">
-
-            <button id="genera">Genera</button>
-            <button id="genera">Annulla</button>
-
-
-            <label for="name">Come ti chiami?</label>
-            <input type="text" id="name">
-
-            
-        
+             </select>
 
     
 
+    <label for="km">Km</label>
+    <input type="number" id="km">
+
+
+    </form>
+    <button id="generaTicket">Genera</button>
+    <button id="resetForm">Annulla</button>
+
+
+         </div>
+
     </main>
+
+   
+
+
+    <form>
+
+   
+
+
+    <div id="yourTicket" class="d-none">
+
+        <table>
+            <tr>
+                <th>Nome passegero</th>
+                <th>Offerta</th>
+                <th>Carrozza</th>
+                <th>Codice</th>
+                <th>Prezzo</th>
+
+            </tr>
+
+            <tr>
+                <td id="ticketName"></td>
+            
+
+             
+                <td id="discount"></td>
+            
+
+            
+                <td id="wagon"></td>
+            
+
+            
+                <td id="prenotationCode"></td>
+            
+
+             
+                <td id="ticketPrice"></td>
+            </tr>
+        </table>
+
+    </div>
 
    
     <script type="text/javascript" src="./js/main.js"></script>

@@ -9,5 +9,9 @@ body{
     text-align: center;
 }
 
+.d-none{
+    display: none;
+}
+
 
 

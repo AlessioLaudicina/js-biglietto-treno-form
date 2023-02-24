@@ -1,51 +1,70 @@
+const generateTicketDom = document.getElementById('generaTicket')
+
+const nameDom = document.getElementById('name');
+
+const ageDom = document.getElementById('age');
+const kmDom = document.getElementById('km');
+const ticketNameDom = document.getElementById('ticketName');
+const discountDom = document.getElementById('discount');
+const wagonDom = document.getElementById('wagon');
+const resetFormDom = document.getElementById('resetForm')
+const yourTicketDom = document.getElementById('yourTicket')
+const ticketPriceDom = document.getElementById('ticketPrice')
 
 
-const priceKm = 0.21
-
-const myName = document.querySelector('#name');
-console.log(myName);
-
-const numeroKm = document.querySelector('#Km');
-console.log(numeroKm);
 
 
-const etaPassegero = document.querySelector('#age');
-console.log(etaPassegero);
 
 
-const prezzo = numeroKm * priceKm;
-console.log(prezzo);
 
-let discountOver = (prezzo * 0.4)
-let discountUnder = (prezzo * 0.2)
+const priceKm = 0.21;
 
-if(etaPassegero > 64){
-    console.log( prezzo = prezzo - discountOver
-    )
-    
+
+generateTicketDom.addEventListener('click', 
+function(){
+
+    const name = nameDom.value
+    const km = parseInt (kmDom.value)
+    const age = ageDom.value
+
+    let price = km * priceKm
+
+    if (age == "minorenne"){
+        price = price - (price * 0,2)
+
+    }
+
+     else if(age == "senior"){
+
+        price = price - (price * 0,4)
+
+    }
+    else {
+        discountDom.innerHTML = "Prezzo pieno"
+
+    }
+
+
+
+    yourTicketDom.classList.remove('d-none')
+
+    ticketNameDom.innerHTML = name;
+
+    ticketPriceDom.innerHTML = `${price.toFixed(2)} euro`
+
+    const wagon = Math.floor(Math.random() * 20) + 1;
+    wagonDom.innerHTML = wagon;
+
+
+
 }
+);
 
-else if(etaPassegero < 18){
-    console.log( prezzo = prezzo - discountUnder 
-    )
-    
-}
+resetFormDom.addEventListener('click',
+function(){
+    yourTicketDom.classList.add('d-none')
+    nameDom.value = ""
+    kmDom.value = ""
+    ageDom.value = ""
+})
 
-else{
-    console.log(prezzo)
-}
-
-document.getElementById('prezzo').innerHTML = (prezzo.toFixed(2))
-
-
-
-domInput.addEventListener('click',
-function () {
-    const kmDom = document.getElementById("Km");
-    const numeroKmDom =  kmDom.value
-
-    const ageDom = document.getElementById("age");
-    const etaPassengerDom =  ageDom.value
-
-}
-)
