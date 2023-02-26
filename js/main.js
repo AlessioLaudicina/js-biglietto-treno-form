@@ -31,12 +31,14 @@ function(){
 
     if (age == "minorenne"){
         price = price - (price * 0,2)
+        discountDom.innerHTML = "Young"
 
     }
 
      else if(age == "senior"){
 
         price = price - (price * 0,4)
+        discountDom.innerHTML = "Sconto silver"
 
     }
     else {

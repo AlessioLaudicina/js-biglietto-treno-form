@@ -10,49 +10,53 @@
 <body>
 
     <main>
-         <div class="generaIltuoTicket">
-             <label for="name">Nome</label>
-            <input type="text" id="name">
 
-            <label for="age">Eta</label>
-            <select id="age">
-              <option value="minorenne">Sconto minorenni</option>
-              <option value="maggiorenne">Maggiorenne</option>
-              <option value="senior">Sconto silver</option>
-
-             </select>
-
+        <div class="container">
+            <h1 style="padding: 20px 0; ">Calcola il tuo biglietto</h1>
+            <div class="generaIltuoTicket">
+                <form class="form-ticket">
+                 <label for="name">Nome</label>
+                <input type="text" id="name">
     
+                <label for="age">Eta</label>
+                <select id="age">
+                  <option value="minorenne">Sconto minorenni</option>
+                  <option value="maggiorenne">Maggiorenne</option>
+                  <option value="senior">Sconto silver</option>
+    
+                 </select>
+    
+        
+    
+        <label for="km">Km</label>
+        <input type="number" id="km">
+    
+    
+               </form>
+        <button id="generaTicket" style="color: brown; margin: 20px 5px;">Genera</button>
+        <button id="resetForm" style="color: brown;">Annulla</button>
+    
+    
+             </div>
 
-    <label for="km">Km</label>
-    <input type="number" id="km">
+        </div>
 
 
-    </form>
-    <button id="generaTicket">Genera</button>
-    <button id="resetForm">Annulla</button>
 
 
-         </div>
-
-    </main>
-
-   
+         
 
 
-    <form>
+    <div id="yourTicket" class="d-none yourTicket">
 
-   
+        
 
-
-    <div id="yourTicket" class="d-none">
-
-        <table>
+        <table style="width: 100%;">
             <tr>
                 <th>Nome passegero</th>
                 <th>Offerta</th>
                 <th>Carrozza</th>
-                <th>Codice</th>
+                
                 <th>Prezzo</th>
 
             </tr>
@@ -70,7 +74,7 @@
             
 
             
-                <td id="prenotationCode"></td>
+                
             
 
              
@@ -79,6 +83,17 @@
         </table>
 
     </div>
+
+    </main>
+
+   
+
+
+    
+
+   
+
+
 
    
     <script type="text/javascript" src="./js/main.js"></script>
